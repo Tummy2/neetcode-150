@@ -23,7 +23,5 @@ nums = [-1,0,1,2,3]
 # Output: [0,-6,0,0,0]
 print(test.productExceptSelf(nums))
 
-print(test.productExceptSelf(nums))
-
 # Time: O(N)
 # Space: O(N)
