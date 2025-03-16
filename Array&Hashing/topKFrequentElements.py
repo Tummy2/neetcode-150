@@ -28,5 +28,5 @@ k = 1
 
 print(test.topKFrequent(nums, k))
 
-# Time: (O(N^2 k))
-# Space: (O(N))
+# Time: O(N)
+# Space: O(N)
