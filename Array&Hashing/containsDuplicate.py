@@ -7,12 +7,13 @@ class Solution:
                 return True
             d[nums[i]] = i
         return False
-    
-Input1 = [1, 2, 3, 3]
-# Output: true
-Input2 = [1, 2, 3, 4]
-# Output: false
 
 test = Solution()
-print(test.hasDuplicate(Input1))
-print(test.hasDuplicate(Input2))
+
+Input = [1, 2, 3, 3]
+# Output: true
+print(test.hasDuplicate(Input))
+
+Input = [1, 2, 3, 4]
+# Output: false
+print(test.hasDuplicate(Input))
