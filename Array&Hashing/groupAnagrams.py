@@ -1,6 +1,7 @@
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         
+        # function to turn word into dictionary
         def turnDict(word: str):
             d = {}
             for i in range(len(word)):
@@ -12,13 +13,16 @@ class Solution:
 
         output = []
         while (len(strs) > 0):
+            # obtain the first word, put it into sub array, then convert to dictionary
             word = strs.pop(0)
             sub = [word]
             d = turnDict(word)
             remove = []
+            # loop through the rest of the words, turn them into dictionaries and compare dictionaries
             for i in range(len(strs)):
                 if d == turnDict(strs[i]):
                     sub.append(strs[i])
+                    # keep track of the indexes to pop out of strs after looping through entire thing
                     remove.append(i - len(remove))
             for index in remove:
                 strs.pop(index)
