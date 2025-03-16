@@ -1,6 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        
+
         d = {}
         for letter in s:
             if letter in d:
@@ -28,3 +28,6 @@ s = "jar"
 t = "jam"
 # Output: false
 print(test.isAnagram(s, t))
+
+# Time: O(N)
+# Space: O(N)

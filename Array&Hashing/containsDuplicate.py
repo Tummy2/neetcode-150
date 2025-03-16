@@ -17,3 +17,6 @@ print(test.hasDuplicate(Input))
 Input = [1, 2, 3, 4]
 # Output: false
 print(test.hasDuplicate(Input))
+
+# Time: O(N)
+# Space: O(N)

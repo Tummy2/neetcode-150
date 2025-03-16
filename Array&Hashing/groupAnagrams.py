@@ -48,3 +48,6 @@ print(test.groupAnagrams(strs))
 strs = ["x"]
 # Output: [["x"]]
 print(test.groupAnagrams(strs))
+
+# Time: (O(N^2 k))
+# Space: (O(N))
