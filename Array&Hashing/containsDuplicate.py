@@ -1,6 +1,6 @@
 class Solution:
     def hasDuplicate(self, nums: list[int]) -> bool:
-         
+
         d = {}
         for i in range(len(nums)):
             if nums[i] in d and d[nums[i]] != i:
