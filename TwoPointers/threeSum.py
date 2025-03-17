@@ -26,7 +26,7 @@ class Solution:
 
 test = Solution()
 
-nums = nums = [-1,0,1,2,-1,-4]
+nums = [-1,0,1,2,-1,-4]
 # Output: [[-1,-1,2],[-1,0,1]]
 print(test.threeSum(nums))
 
