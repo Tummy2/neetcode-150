@@ -7,7 +7,7 @@ class Solution:
 
         for i, a in enumerate(nums):
             if a > 0:
-                return output
+                break
 
             if i and nums[i] == nums[i-1]:
                 continue
