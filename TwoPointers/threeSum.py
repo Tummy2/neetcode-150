@@ -1,26 +1,33 @@
-from collections import defaultdict
-
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
 
+        nums.sort()
         output = []
-        seen = set()
-        for i in range(len(nums)):
-            # Gets the first of 3, then treat as 2 sum after calculating new target
-            target = 0 - nums[i]
-            curr = []
-            d = defaultdict(int)
-            for j in range(i+1, len(nums)):
-                num = nums[j]
-                need = target - num
-                if need in d:
-                    curr = [nums[i], num, need]
-                    # Store in set of seen 3sums for no repeats
-                    if frozenset(curr) not in seen:
-                        output.append(curr)
-                        seen.add(frozenset(curr))
+        print(nums)
+
+        for i, a in enumerate(nums):
+            if a > 0:
+                return output
+
+            if i and nums[i] == nums[i-1]:
+                continue
+            
+            target = 0 - a
+            left = i + 1
+            right = len(nums)-1
+            while (left < right):
+                print(a, nums[left], nums[right])
+                if (nums[left] + nums[right]) < target:
+                    left += 1
+                elif (nums[left] + nums[right]) > target:  
+                    right -= 1
                 else:
-                    d[num] += 1
+                    output.append([a, nums[left], nums[right]])
+                    left += 1
+                    right -= 1
+                
+                    while left < len(nums) and (nums[left] == nums[left-1]):
+                        left += 1
 
         return output
 
