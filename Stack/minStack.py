@@ -9,7 +9,7 @@ class MinStack:
         if len(self.minStack) == 0:
             self.minStack.append(val)
         else:
-            if val <= self.minStack[len(self.minStack)-1]:
+            if val <= self.minStack[-1]:
                 self.minStack.append(val)
         return None
 
