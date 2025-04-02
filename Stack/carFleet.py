@@ -32,5 +32,5 @@ speed = [2,2,1,1]
 # Output: 3
 print(test.carFleet(target, position, speed))
 
-# Time: O(N)
+# Time: O(nlogn)
 # Space: O(N)
