@@ -1,5 +1,10 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
+
+        # Floyds Algorithm
+        # when the fast and slow pointer first meet, that is the start of the cycle
+        # have another slow pointer start at the beginning of the list
+        # iterate both slow pointers, when they first meet, that is the duplicate number
         
         slow, fast = 0, 0
         while True:
